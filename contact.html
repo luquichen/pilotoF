@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,8 +18,9 @@
     <link rel="stylesheet" href="./assets/css/styles.css">
 
 </head>
+
 <body>
-          <nav class="navbar navbar-expand-lg bg-white sticky-top">
+    <nav class="navbar navbar-expand-lg bg-white sticky-top">
         <div class="container">
             <a class="navbar-brand" href="./index.html">
                 <img src="./assets/images/logo1111.png" alt="" style="width: 150px; height: 70%;">
@@ -43,9 +45,9 @@
             </div>
         </div>
     </nav>
-    <section class="section-padding bg-light" id="contact" >
-        <div class="container" >
-            <div class="row" >
+    <section class="section-padding bg-light" id="contact">
+        <div class="container">
+            <div class="row">
                 <div class="col-12 text-center" data-aos="fade-down" data-aos-delay="150">
                     <div class="section-title">
                         <h1 class="display-4 text-white fw-semibold">Contactanos</h1>
@@ -53,50 +55,71 @@
                     </div>
                 </div>
             </div>
-            <div class="row justify-content-center" data-aos="fade-down" data-aos-delay="250" >
+            <div class="row justify-content-center" data-aos="fade-down" data-aos-delay="250">
                 <div class="col-lg-8" style="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;">
-                    <form action="#" class="row g-3 p-lg-5 p-4 bg-white theme-shadow">
-
+                    <form action="https://formsubmit.co/recepcioninstitutofahy@gmail.com" method="POST"
+                        class="row g-3 p-lg-5 p-4 bg-white theme-shadow">
+                        <input type="hidden" name="_captcha" value="false">
                         <div class="alert alert-danger" role="alert">
                             Si desea inscribirse en la lista de espera, <a href="#becas"> haga clic aquí.</a>
-                          </div>
-                        <div class="form-group col-lg-6">
-                            <input type="text" class="form-control" placeholder="Nombre">
                         </div>
                         <div class="form-group col-lg-6">
-                            <input type="text" class="form-control" placeholder="Apellido">
+                            <input type="text" class="form-control" placeholder="Nombre" name="nombre" required>
+                        </div>
+                        <div class="form-group col-lg-6">
+                            <input type="text" class="form-control" placeholder="Apellido" name="apellido" required>
                         </div>
                         <div class="form-group col-lg-12">
-                            <input type="email" class="form-control" placeholder="Email">
+                            <input type="email" class="form-control" placeholder="Email" name="email" required>
                         </div>
                         <div class="form-group col-lg-12">
-                            <input type="text" class="form-control" placeholder="Asunto">
+                            <input type="text" class="form-control" placeholder="Asunto" name="asunto">
                         </div>
                         <div class="form-group col-lg-12">
-                            <textarea name="message" rows="5" class="form-control" placeholder="Mensaje"></textarea>
+                            <textarea name="mensaje" rows="5" class="form-control" placeholder="Mensaje"
+                                required></textarea>
                         </div>
                         <div class="form-group col-lg-12 d-grid">
-                            <button class="btn btn-brand">Enviar</button>
+                            <button class="btn btn-brand" type="submit">Enviar</button>
                         </div>
+                        <input type="hidden" name="_next" value="https://pilotofahy.netlify.app/contact?success=1">
+                        <!-- Redirige después de enviar -->
+                        <input type="hidden" name="_captcha" value="false"> <!-- Desactiva reCAPTCHA si lo deseas -->
+
                     </form>
+
+
+
                 </div>
             </div>
         </div>
+        <div class="toast align-items-center text-bg-success border-0 position-fixed bottom-0 end-0 m-3" id="successToast" role="alert" aria-live="assertive" aria-atomic="true">
+  <div class="d-flex">
+    <div class="toast-body">
+      Mail enviado correctamente
+    </div>
+    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Cerrar"></button>
+  </div>
+</div>
+
     </section>
     <section id="becas" class="section-padding border-top">
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center" data-aos="fade-down" data-aos-delay="150">
                     <div class="section-title">
-                        <h3 class=" fw-semibold">Formularios a lista de espera bacantes: </h3   >
+                        <h3 class=" fw-semibold">Formularios a lista de espera vacantes: </h3>
                         <div class="line"></div>
-                        <p>En caso de estar interesados de participar de la lista de espera, le solicitamos seleccionar y completar el formulario correspondiente a la sala, grado o año que su hijo/a ingresaría en el año 2026:</p>
+                        <p>En caso de estar interesados de participar de la lista de espera, le solicitamos seleccionar
+                            y completar el formulario correspondiente a la sala, grado o año que su hijo/a ingresaría en
+                            el año 2026:</p>
                     </div>
                 </div>
             </div>
             <div class="row g-4 text-center">
                 <div class="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="150">
-                    <a href="https://forms.gle/jZaXpWZiEPvdPYp19" target="_blank" class="text-decoration-none text-dark">
+                    <a href="https://forms.gle/jZaXpWZiEPvdPYp19" target="_blank"
+                        class="text-decoration-none text-dark">
                         <div class="service theme-shadow p-lg-5 p-4">
                             <div class="iconbox">
                                 <i class="bi bi-book"></i>
@@ -107,7 +130,8 @@
                     </a>
                 </div>
                 <div class="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="150">
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSe6qzrwY4zDqpAB9yYEmNmwkRSmdU6YlR8oAqNsfay07JcIOw/viewform" target="_blank" class="text-decoration-none text-dark">
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSe6qzrwY4zDqpAB9yYEmNmwkRSmdU6YlR8oAqNsfay07JcIOw/viewform"
+                        target="_blank" class="text-decoration-none text-dark">
                         <div class="service theme-shadow p-lg-5 p-4">
                             <div class="iconbox">
                                 <i class="bi bi-book"></i>
@@ -118,7 +142,8 @@
                     </a>
                 </div>
                 <div class="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="150">
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSe5UWIXDHKnZLgBvq510M-AqY37pGnocG_-anC5n_SOzCOMFQ/viewform" target="_blank" class="text-decoration-none text-dark">
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSe5UWIXDHKnZLgBvq510M-AqY37pGnocG_-anC5n_SOzCOMFQ/viewform"
+                        target="_blank" class="text-decoration-none text-dark">
                         <div class="service theme-shadow p-lg-5 p-4">
                             <div class="iconbox">
                                 <i class="bi bi-book"></i>
@@ -131,7 +156,7 @@
             </div>
         </div>
     </section>
-    
+
 
     <footer class="bg-dark">
         <div class="footer-top">
@@ -139,11 +164,14 @@
                 <div class="row gy-5">
                     <!-- Columna Izquierda - Lema -->
                     <div class="col-md-4">
-                        <a href="#"><img src="./assets/images/logo111 blanco.png" style="max-width: 150px; color: white;" alt="Logo"></a>
+                        <a href="#"><img src="./assets/images/logo111 blanco.png"
+                                style="max-width: 150px; color: white;" alt="Logo"></a>
                         <div class="line"></div>
-                        <p class="text-white">Escuela con orientación agropecuaria -  Fundada en 1891</p>
+                        <p class="text-white">Escuela con orientación agropecuaria - Fundada en 1827</p>
+                        <p class="text-white">Asociación de Señoras de San José- Entidad propietaria y fundadora.</p>
+
                     </div>
-    
+
                     <!-- Columna Central - Contacto -->
                     <div class="col-md-4">
                         <h5 class="mb-0 text-white">CONTACTO</h5>
@@ -151,16 +179,19 @@
                         <ul class="mt-3">
                             <li><i class="ri-map-pin-line me-2"></i>Av. Francisco Piovano 4400</li>
                             <li><i class="ri-phone-line me-2"></i>011 2474-0971</li>
-                            <li><i class="ri-mail-line me-2"></i>preguntrar que correo ponmer</li>
+                            <li><i class="ri-mail-line me-2"></i>recepcioninstitutofahy@gmail.com</li>
                         </ul>
                     </div>
-    
+
                     <!-- Columna Derecha - Mapa -->
                     <div class="col-md-4">
                         <h5 class="mb-0 text-white">UBICACIÓN</h5>
                         <div class="line"></div>
                         <div class="mt-3">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.360884294689!2d-58.8123664!3d-34.645587899999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc946bf70459ad%3A0xb20d022af0f129e1!2sInstituto%20Fahy!5e0!3m2!1sen!2sar!4v1748362211586!5m2!1sen!2sar" width="250" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.360884294689!2d-58.8123664!3d-34.645587899999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc946bf70459ad%3A0xb20d022af0f129e1!2sInstituto%20Fahy!5e0!3m2!1sen!2sar!4v1748362211586!5m2!1sen!2sar"
+                                width="250" height="150" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
                 </div>
@@ -171,5 +202,20 @@
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="./assets/js/main.js"></script>
+    <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('success') === '1') {
+      const toastEl = document.getElementById('successToast');
+      const toast = new bootstrap.Toast(toastEl);
+      toast.show();
+      // Opcional: limpiar URL para que no aparezca al recargar
+      window.history.replaceState({}, document.title, window.location.pathname);
+    }
+  });
+</script>
+
+
 </body>
+
 </html>

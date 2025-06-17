@@ -4,7 +4,7 @@
 /* VARIABLES */
 :root {
     --c-dark: #212529;
-    --c-brand: #4e57d4;
+    --c-brand: #ff4500;
     --c-brand-light: #6970dd;
     --c-brand-rgb: 78, 87, 212;
     --c-brand2-rgb: 64, 128, 212;
@@ -61,6 +61,7 @@ img {
 .navbar-nav .nav-link.active {
     color: var(--c-brand);
 }
+
 .iconbox {
     width: 70px;
     height: 70px;
@@ -118,6 +119,13 @@ img {
     background-color: #ff4500c4;
     margin: 16px auto 24px auto;
 }
+.lineAux {
+    width: 60px;
+    height: 4px;
+    background-color: #ff4500c4;
+    margin: 16px 0 24px 0; /* quitamos el auto */
+}
+
 
 .section-title p {
     max-width: 500px;
@@ -176,6 +184,20 @@ img {
 .portfolio-item:hover .iconbox {
     opacity: 1;
     top: 50%;
+}
+
+.equal-height {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.equal-height > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.equal-height .service {
+    flex-grow: 1;
 }
 
 /* REVIEW */
@@ -298,3 +320,8 @@ footer .line {
     color: white;
 }
 
+#counter {
+    background: linear-gradient(rgba(var(--c-brand2-rgb), 0.507), rgba(var(--c-brand2-rgb), 0.438)), url(../images/hero2.png);
+    background-position: center;
+    background-size: cover;
+}
