@@ -199,7 +199,7 @@
       <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 <body>
- <nav class="navbar navbar-expand-lg bg-white sticky-top">
+  <nav class="navbar navbar-expand-lg bg-white sticky-top">
         <div class="container">
             <a class="navbar-brand" href="./index.html">
                 <img src="./assets/images/logoverdeing.png" alt="" style="width: 150px; height: 70%;">
@@ -215,6 +215,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./historia.html">Historia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./ADSJ.html">ASSJ</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./instalacion.html">Galería</a>
@@ -302,44 +305,42 @@
     
     <script>
         // Lista de imágenes (ejemplo con 10 imágenes, reemplaza con las tuyas)
-         const imageFiles = [
-            "image00001.jpeg", "image00002.jpeg", "image00003.jpeg", "image00004.jpeg", 
-            "image00005.jpeg", "image00006.jpeg", "image00007.jpeg", "image00008.jpeg", 
-            "image00009.jpeg", "image00010.jpeg", "image00011.jpeg", "image00012.jpeg", 
-            "image00013.jpeg", "image00014.jpeg", "image00015.jpeg", "image00016.jpeg", 
-            "image00017.jpeg", "image00018.jpeg", "image00019.jpeg", "image00020.jpeg", 
-            "image00021.jpeg", "image00022.jpeg", "image00023.jpeg", "image00024.jpeg", 
-            "image00025.jpeg", "image00026.jpeg", "image00027.jpeg", "image00028.jpeg", 
-            "image00031.jpeg", "image00032.jpeg", 
-            "image00033.jpeg", "image00034.jpeg", "image00035.jpeg", "image00036.jpeg", 
-            "image00037.jpeg", "image00038.jpeg", "image00039.jpeg", "image00040.jpeg", 
-            "image00041.jpeg", "image00042.jpeg", "image00043.jpeg", "image00044.jpeg", 
-            "image00045.jpeg", "image00046.jpeg", "image00047.jpeg", "image00048.jpeg", 
-            "image00049.jpeg", "image00050.jpeg", "image00051.jpeg", "image00052.jpeg", 
-            "image00053.jpeg", "image00054.jpeg", "image00055.jpeg", "image00056.jpeg", 
-            "image00057.jpeg", "image00058.jpeg", "image00059.jpeg", "image00060.jpeg", 
-            "image00061.jpeg", "image00062.jpeg", "image00063.jpeg", "image00064.jpeg", 
-            "image00065.jpeg", "image00066.jpeg", "image00068.jpeg", 
-            "image00069.jpeg", "image00070.jpeg", "image00071.jpeg", "image00072.jpeg", 
-            "image00073.jpeg", "image00074.jpeg", 
-            "image00077.jpeg", "image00079.jpeg", "image00080.jpeg", 
-            "image00081.jpeg", "image00082.jpeg", "image00084.jpeg", 
-            "image00085.jpeg", "image00086.jpeg", "image00087.jpeg", "image00088.jpeg", 
-            "image00089.jpeg", "image00090.jpeg", "image00091.jpeg", "image00092.jpeg", 
-            "image00093.jpeg", "image00094.jpeg", "image00095.jpeg", "image00096.jpeg", 
-            "image00097.jpeg", "image00098.jpeg", "image00099.jpeg", "image00100.jpeg", 
-            "image00101.jpeg", "image00102.jpeg", "image00103.jpeg", "image00104.jpeg", 
-            "image00105.jpeg", "image00106.jpeg", "image00107.jpeg", "image00108.jpeg", 
-            "image00109.jpeg", "image00110.jpeg", "image00111.jpeg", "image00112.jpeg", 
-            "image00113.jpeg", "image00114.jpeg", "image00115.jpeg", "image00116.jpeg", 
-            "image00117.jpeg", "image00118.jpeg", "image00119.jpeg", "image00120.jpeg", 
-            "image00121.jpeg", "image00122.jpeg", "image00123.jpeg", "image00124.jpeg", 
-            "image00125.jpeg", "image00126.jpeg", "image00127.jpeg", "image00128.jpeg", 
-            "image00129.jpeg", "image00130.jpeg", "image00131.jpeg", "image00132.jpeg", 
-            "image00133.jpeg", "image00134.jpeg", "image00135.jpeg", "image00136.jpeg", 
-            "image00137.jpeg", "image00138.jpeg", "image00139.jpeg"
-        ];
-
+  const imageFiles = [
+    "image00001_1.jpeg", "image00002_1.jpeg", "image00003_1.jpeg", "image00004_1.jpeg",
+    "image00005_1.jpeg", "image00006_1.jpeg", "image00007_1.jpeg", "image00008_1.jpeg",
+    "image00009_1.jpeg", "image00010_1.jpeg", "image00011_1.jpeg", "image00012_1.jpeg",
+    "image00013_1.jpeg", "image00014_1.jpeg", "image00015_1.jpeg", "image00016_1.jpeg",
+    "image00017_1.jpeg", "image00018_1.jpeg", "image00019_1.jpeg", "image00020_1.jpeg",
+    "image00021_1.jpeg", "image00022_1.jpeg", "image00023_1.jpeg", "image00024_1.jpeg",
+    "image00025_1.jpeg", "image00026_1.jpeg", "image00027_1.jpeg", "image00028_1.jpeg",
+    "image00031_1.jpeg", "image00032_1.jpeg", "image00033_1.jpeg", "image00034_1.jpeg",
+    "image00035_1.jpeg", "image00036_1.jpeg", "image00037_1.jpeg", "image00038_1.jpeg",
+    "image00039_1.jpeg", "image00040_1.jpeg", "image00041_1.jpeg", "image00042_1.jpeg",
+    "image00043_1.jpeg", "image00044_1.jpeg", "image00045_1.jpeg", "image00046_1.jpeg",
+    "image00047_1.jpeg", "image00048_1.jpeg", "image00049_1.jpeg", "image00050_1.jpeg",
+    "image00051_1.jpeg", "image00052_1.jpeg", "image00053.jpeg", "image00054.jpeg",
+    "image00055.jpeg", "image00056.jpeg", "image00057.jpeg", "image00058.jpeg",
+    "image00059.jpeg", "image00060.jpeg", "image00061.jpeg", "image00062.jpeg",
+    "image00063.jpeg", "image00064.jpeg", "image00065.jpeg", "image00066.jpeg",
+    "image00068.jpeg", "image00069.jpeg", "image00070.jpeg", "image00071.jpeg",
+    "image00072.jpeg", "image00073.jpeg", "image00074.jpeg", "image00076.jpeg",
+    "image00078.jpeg", "image00079.jpeg", "image00080.jpeg", "image00081.jpeg",
+    "image00082.jpeg", "image00083.jpeg",  "image00085.jpeg",
+    "image00086.jpeg", "image00087.jpeg", "image00088.jpeg", "image00089.jpeg",
+    "image00090.jpeg", "image00091.jpeg", "image00092.jpeg", "image00093.jpeg",
+    "image00094.jpeg", "image00095.jpeg", "image00096.jpeg", "image00097.jpeg",
+    "image00098.jpeg", "image00099.jpeg", "image00100.jpeg", "image00101.jpeg",
+    "image00102.jpeg", "image00103.jpeg", "image00104.jpeg", "image00105.jpeg",
+    "image00106.jpeg", "image00107.jpeg", "image00108.jpeg", "image00109.jpeg",
+    "image00110.jpeg", "image00111.jpeg", "image00112.jpeg", "image00113.jpeg",
+    "image00114.jpeg", "image00115.jpeg", "image00116.jpeg", "image00117.jpeg",
+    "image00118.jpeg", "image00119.jpeg", "image00120.jpeg", "image00121.jpeg",
+    "image00122.jpeg", "image00123.jpeg", "image00124.jpeg", "image00125.jpeg",
+    "image00126.jpeg", "image00127.jpeg", "image00128.jpeg", "image00129.jpeg",
+    "image00130.jpeg", "image00131.jpeg", "image00132.jpeg", "image00133.jpeg",
+    "image00134.jpeg", "image00135.jpeg", "image00136.jpeg", "image00137.jpeg",
+    "image00138.jpeg", "image00139.jpeg"
+];
         // Función para generar la galería
         function generateGallery() {
             const galleryRow = document.getElementById('gallery-row');

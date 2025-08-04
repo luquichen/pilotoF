@@ -16,44 +16,44 @@
             --secondary: #ff4500;
             --light: #f5f5f5;
             --dark: #1a1a1a;
-             --font-base: "ClashDisplay", sans-serif;
+            --font-base: "ClashDisplay", sans-serif;
         }
-        
+
         body {
             font-family: 'ClashDisplay', sans-serif;
             color: #333;
             line-height: 1.6;
         }
-        
+
         .section-padding {
             padding: 80px 0;
         }
-        
+
         .bg-light-alt {
             background-color: #f8f9fa;
         }
-        
+
         .section-title {
             margin-bottom: 60px;
             text-align: center;
         }
-        
+
         .section-title h1 {
             font-size: 2.5rem;
             font-weight: 700;
             margin-bottom: 15px;
             color: var(--dark);
         }
-        
 
-        
+
+
         .section-title p {
             font-size: 1.2rem;
             color: #666;
             max-width: 700px;
             margin: 0 auto;
         }
-        
+
         .line {
             width: 80px;
             height: 4px;
@@ -61,13 +61,13 @@
             margin: 20px auto;
             border-radius: 2px;
         }
-        
+
         .timeline {
             position: relative;
             max-width: 1200px;
             margin: 0 auto;
         }
-        
+
         .timeline::after {
             content: '';
             position: absolute;
@@ -78,14 +78,14 @@
             left: 50%;
             margin-left: -3px;
         }
-        
+
         .timeline-item {
             padding: 10px 40px;
             position: relative;
             width: 50%;
             box-sizing: border-box;
         }
-        
+
         .timeline-item::after {
             content: '';
             position: absolute;
@@ -97,15 +97,15 @@
             border-radius: 50%;
             z-index: 1;
         }
-        
+
         .left {
             left: 0;
         }
-        
+
         .right {
             left: 50%;
         }
-        
+
         .left::before {
             content: " ";
             height: 0;
@@ -118,7 +118,7 @@
             border-width: 10px 0 10px 10px;
             border-color: transparent transparent transparent white;
         }
-        
+
         .right::before {
             content: " ";
             height: 0;
@@ -131,11 +131,11 @@
             border-width: 10px 10px 10px 0;
             border-color: transparent white transparent transparent;
         }
-        
+
         .right::after {
             left: -12px;
         }
-        
+
         .timeline-content {
             padding: 20px 30px;
             background-color: white;
@@ -143,7 +143,7 @@
             border-radius: 6px;
             box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
         }
-        
+
         .quote-card {
             border-left: 4px solid var(--secondary);
             padding: 20px;
@@ -152,7 +152,7 @@
             font-style: italic;
             font-size: 1.1rem;
         }
-        
+
         .mission-card {
             background: linear-gradient(135deg, #004225 0%, #014729 100%);
             color: white;
@@ -161,59 +161,60 @@
             margin: 40px 0;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
-        
+
         .founder-section {
             background-color: #e9f5eb;
             padding: 40px 0;
             border-radius: 8px;
             margin: 40px 0;
         }
-        
+
         .img-border {
             border: 5px solid white;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
-        
+
         @media screen and (max-width: 768px) {
             .timeline::after {
                 left: 31px;
             }
-            
+
             .timeline-item {
                 width: 100%;
                 padding-left: 70px;
                 padding-right: 25px;
             }
-            
+
             .timeline-item::before {
                 left: 60px;
                 border: medium solid white;
                 border-width: 10px 10px 10px 0;
                 border-color: transparent white transparent transparent;
             }
-            
-            .left::after, .right::after {
+
+            .left::after,
+            .right::after {
                 left: 15px;
             }
-            
+
             .right {
                 left: 0%;
             }
         }
-        
+
         footer {
             background-color: var(--primary);
             color: white;
             padding: 60px 0 20px;
         }
-        
+
         .footer-title {
             font-size: 1.5rem;
             margin-bottom: 20px;
             position: relative;
             display: inline-block;
         }
-        
+
         .footer-title::after {
             content: '';
             position: absolute;
@@ -223,7 +224,7 @@
             bottom: -10px;
             left: 0;
         }
-        
+
         .social-icons a {
             display: inline-block;
             width: 40px;
@@ -236,12 +237,12 @@
             margin-right: 10px;
             transition: all 0.3s ease;
         }
-        
+
         .social-icons a:hover {
             background: var(--secondary);
             transform: translateY(-3px);
         }
-        
+
         .copyright {
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             padding-top: 20px;
@@ -251,23 +252,22 @@
         }
 
         .btn-brand {
-    background-color: #ff4500;
-    border-color: #ff4500;
-    color: white;
+            background-color: #ff4500;
+            border-color: #ff4500;
+            color: white;
         }
 
-        .logofond{
+        .logofond {
             color: #ff4500;
         }
     </style>
 </head>
 
 <body>
-    <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg bg-white sticky-top">
         <div class="container">
             <a class="navbar-brand" href="./index.html">
-                <img src="./assets/images/logo1111.png" alt="Logo Instituto Fahy" style="width: 150px; height: 70%;">
+                <img src="./assets/images/logoverdeing.png" alt="" style="width: 150px; height: 70%;">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -282,10 +282,13 @@
                         <a class="nav-link" href="./historia.html">Historia</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./instalacion.html">Galeria</a>
+                        <a class="nav-link" href="./ADSJ.html">ASSJ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./instalacion.html">Galería</a>
                     </li>
                 </ul>
-                <a href="./contact.html" class="btn btn-brand ms-lg-3">Contactanos</a>
+                <a href="./contact.html" class="btn btn-brand ms-lg-3">Contáctanos</a>
             </div>
         </div>
     </nav>
@@ -295,14 +298,16 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6">
-                    <h1 class="display-4 fw-bold mb-4" data-aos="fade-right">Historia de la Asociación de Señoras de San José</h1>
-                    <p class="lead mb-4" data-aos="fade-right" data-aos-delay="100">Fundada en 1891 por mujeres irlandesas para proteger y educar a los huérfanos de la inmigración</p>
-                    <div class="d-flex" data-aos="fade-right" data-aos-delay="200">
-                        <a href="#fundacion" class="btn btn-lg btn-brand me-3">Conoce nuestra historia</a>
-                    </div>
-                </div>
+    <h1 class="display-4 fw-bold mb-4" data-aos="fade-right">Historia de la Asociación de Señoras de San José</h1>
+    <p class="lead mb-4" data-aos="fade-right" data-aos-delay="100">Fundada en 1891 por mujeres irlandesas para proteger y educar a los huérfanos de la inmigración</p>
+    <div class="d-flex justify-content-center mb-3 mb-md-4" data-aos="fade-right" data-aos-delay="200">
+        <!-- Añadí justify-content-center para centrar horizontalmente -->
+        <a href="#fundacion" class="btn btn-lg btn-brand">Conoce nuestra historia</a>
+    </div>
+</div>
                 <div class="col-md-6 text-center" data-aos="fade-left">
-                    <img src="assets/images/HISTORIAAD/inmigrantes.jpg" alt="Inmigrantes irlandeses en Argentina" class="img-fluid rounded shadow-lg">
+                    <img src="assets/images/HISTORIAAD/inmigrantes.jpg" alt="Inmigrantes irlandeses en Argentina"
+                        class="img-fluid rounded shadow-lg">
                 </div>
             </div>
         </div>
@@ -323,32 +328,46 @@
 
             <div class="row">
                 <div class="col-lg-8 mx-auto">
-                    <p data-aos="fade-up">A mediados del siglo XIX, Argentina recibió a los primeros inmigrantes irlandeses que huían de la persecución religiosa contra los católicos y de la pobreza extrema en su tierra natal. Estos inmigrantes encontraron en nuestro país un refugio generoso donde comenzar una nueva vida.</p>
-                    
+                    <p data-aos="fade-up">A mediados del siglo XIX, Argentina recibió a los primeros inmigrantes
+                        irlandeses que huían de la persecución religiosa contra los católicos y de la pobreza extrema en
+                        su tierra natal. Estos inmigrantes encontraron en nuestro país un refugio generoso donde
+                        comenzar una nueva vida.</p>
+
                     <div class="row mt-4 align-items-center">
                         <div class="col-md-6" data-aos="fade-right">
-                            <img src="assets/images/HISTORIAAD/inmigacion_irlandesa__estancieros_tomando_mate.jpg" alt="Inmigrantes irlandeses" class="img-fluid rounded shadow">
+                            <img src="assets/images/HISTORIAAD/inmigacion_irlandesa__estancieros_tomando_mate.jpg"
+                                alt="Inmigrantes irlandeses" class="img-fluid rounded shadow">
                         </div>
                         <div class="col-md-6" data-aos="fade-left" data-aos-delay="100">
-                            <p>La mayoría de estos inmigrantes se establecieron en zonas rurales, ya que su origen campesino los preparaba para trabajar como pastores, peones y mayordomos en las vastas estancias de la pampa argentina.</p>
-                            <p>Con el paso de los años, gracias a su honestidad y trabajo duro, la comunidad irlandesa prosperó y creció, integrando sus tradiciones a la cultura argentina mientras mantenían su fe católica como elemento identitario.</p>
+                            <p>La mayoría de estos inmigrantes se establecieron en zonas rurales, ya que su origen
+                                campesino los preparaba para trabajar como pastores, peones y mayordomos en las vastas
+                                estancias de la pampa argentina.</p>
+                            <p>Con el paso de los años, gracias a su honestidad y trabajo duro, la comunidad irlandesa
+                                prosperó y creció, integrando sus tradiciones a la cultura argentina mientras mantenían
+                                su fe católica como elemento identitario.</p>
                         </div>
                     </div>
-                    
+
                     <h3 class="mt-5" data-aos="fade-up">La gran ola migratoria de 1889</h3>
                     <div class="line" data-aos="fade-up"></div>
-                    
+
                     <div class="row mt-4">
                         <div class="col-md-6" data-aos="fade-right">
-                            <p>A fines del siglo XIX, durante la presidencia de Juárez Celman, llegó a bordo del vapor "City of Dresden" el 8 de febrero de 1889, una nueva oleada de aproximadamente 1,000 familias irlandesas que escapaban de una feroz hambruna en Irlanda.</p>
+                            <p>A fines del siglo XIX, durante la presidencia de Juárez Celman, llegó a bordo del vapor
+                                "City of Dresden" el 8 de febrero de 1889, una nueva oleada de aproximadamente 1,000
+                                familias irlandesas que escapaban de una feroz hambruna en Irlanda.</p>
                         </div>
                         <div class="col-md-6" data-aos="fade-left" data-aos-delay="100">
-                            <p>Lamentablemente, los preparativos para recibir adecuadamente a tan numeroso grupo de inmigrantes fallaron. Muchos de ellos, sin dinero, sin trabajo y sin hablar el idioma, enfrentaron situaciones extremadamente difíciles.</p>
+                            <p>Lamentablemente, los preparativos para recibir adecuadamente a tan numeroso grupo de
+                                inmigrantes fallaron. Muchos de ellos, sin dinero, sin trabajo y sin hablar el idioma,
+                                enfrentaron situaciones extremadamente difíciles.</p>
                         </div>
                     </div>
-                    
+
                     <div class="quote-card mt-4" data-aos="fade-up">
-                        <p>"La tragedia fue que muchos de estos inmigrantes murieron debido a las penurias, dejando atrás a numerosos huérfanos que se encontraron solos y desamparados en un país extranjero."</p>
+                        <p>"La tragedia fue que muchos de estos inmigrantes murieron debido a las penurias, dejando
+                            atrás a numerosos huérfanos que se encontraron solos y desamparados en un país extranjero."
+                        </p>
                     </div>
                 </div>
             </div>
@@ -373,23 +392,31 @@
                     <div class="founder-section" data-aos="fade-up">
                         <div class="row align-items-center">
                             <div class="col-md-4 text-center">
-                                <img src="assets/images/HISTORIAAD/mf.png" alt="Marion Murphy de Mulhall" class="img-fluid rounded-circle img-border" style="max-width: 160px;">
+                                <img src="assets/images/HISTORIAAD/mf.png" alt="Marion Murphy de Mulhall"
+                                    class="img-fluid rounded-circle img-border" style="max-width: 160px;">
                                 <h4 class="mt-3">Marion Murphy de Mulhall</h4>
                                 <p class="text-muted">Fundadora y líder de la Asociación</p>
                             </div>
                             <div class="col-md-8">
                                 <h3 data-aos="fade-left">Marion Murphy de Mulhall</h3>
-                                <p data-aos="fade-left" data-aos-delay="100">Ante la trágica situación de los huérfanos irlandeses, las esposas e hijas de los irlandeses ya establecidos en Argentina se unieron formalmente en 1891 para crear la Asociación de Señoras de San José.</p>
-                                <p data-aos="fade-left" data-aos-delay="200">Esta iniciativa fue liderada por Marion Murphy de Mulhall, una mujer de gran fortaleza y compromiso social, cuya visión y determinación fueron fundamentales para la creación y consolidación de la organización.</p>
+                                <p data-aos="fade-left" data-aos-delay="100">Ante la trágica situación de los huérfanos
+                                    irlandeses, las esposas e hijas de los irlandeses ya establecidos en Argentina se
+                                    unieron formalmente en 1891 para crear la Asociación de Señoras de San José.</p>
+                                <p data-aos="fade-left" data-aos-delay="200">Esta iniciativa fue liderada por Marion
+                                    Murphy de Mulhall, una mujer de gran fortaleza y compromiso social, cuya visión y
+                                    determinación fueron fundamentales para la creación y consolidación de la
+                                    organización.</p>
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="mission-card mt-5" data-aos="fade-up">
                         <h3 class="text-center mb-4">Misión fundacional</h3>
-                        <p class="text-center">"La Asociación de Señoras de San José apoya y acompaña el desarrollo integral de la persona, promoviendo los valores cristianos y propiciando una formación que facilite su inserción laboral."</p>
+                        <p class="text-center">"La Asociación de Señoras de San José apoya y acompaña el desarrollo
+                            integral de la persona, promoviendo los valores cristianos y propiciando una formación que
+                            facilite su inserción laboral."</p>
                     </div>
-                    
+
                     <div class="row mt-5">
                         <div class="col-md-6" data-aos="fade-right">
                             <h4>Acciones inmediatas</h4>
@@ -403,8 +430,10 @@
                         </div>
                         <div class="col-md-6" data-aos="fade-left" data-aos-delay="100">
                             <h4>Reconocimiento oficial</h4>
-                            <p>La labor de la Asociación fue tan significativa que en 1897 obtuvo la personería jurídica, reconociendo formalmente su importante labor social y humanitaria.</p>
-                            <p>Esta formalización permitió a la organización expandir sus actividades y recibir apoyo de la comunidad en general.</p>
+                            <p>La labor de la Asociación fue tan significativa que en 1897 obtuvo la personería
+                                jurídica, reconociendo formalmente su importante labor social y humanitaria.</p>
+                            <p>Esta formalización permitió a la organización expandir sus actividades y recibir apoyo de
+                                la comunidad en general.</p>
                         </div>
                     </div>
                 </div>
@@ -429,37 +458,43 @@
                 <div class="timeline-item left" data-aos="fade-right">
                     <div class="timeline-content">
                         <h3>1891</h3>
-                        <p>Fundación de la Asociación de Señoras de San José por Marion Murphy de Mulhall y otras mujeres irlandesas para ayudar a los huérfanos de la inmigración.</p>
+                        <p>Fundación de la Asociación de Señoras de San José por Marion Murphy de Mulhall y otras
+                            mujeres irlandesas para ayudar a los huérfanos de la inmigración.</p>
                     </div>
                 </div>
                 <div class="timeline-item right" data-aos="fade-left">
                     <div class="timeline-content">
                         <h3>1897</h3>
-                        <p>La Asociación obtiene su personería jurídica, reconociendo formalmente su labor social y humanitaria.</p>
+                        <p>La Asociación obtiene su personería jurídica, reconociendo formalmente su labor social y
+                            humanitaria.</p>
                     </div>
                 </div>
                 <div class="timeline-item left" data-aos="fade-right">
                     <div class="timeline-content">
                         <h3>1900-1920</h3>
-                        <p>Expansión de las actividades de la Asociación, estableciendo hogares para niños y programas educativos en Buenos Aires y zonas rurales.</p>
+                        <p>Expansión de las actividades de la Asociación, estableciendo hogares para niños y programas
+                            educativos en Buenos Aires y zonas rurales.</p>
                     </div>
                 </div>
                 <div class="timeline-item right" data-aos="fade-left">
                     <div class="timeline-content">
                         <h3>1927</h3>
-                        <p>Fundación del Instituto Fahy en Moreno, Provincia de Buenos Aires, como culminación del proyecto educativo de la Asociación.</p>
+                        <p>Fundación del Instituto Fahy en Moreno, Provincia de Buenos Aires, como culminación del
+                            proyecto educativo de la Asociación.</p>
                     </div>
                 </div>
                 <div class="timeline-item left" data-aos="fade-right">
                     <div class="timeline-content">
                         <h3>1940-1960</h3>
-                        <p>Consolidación del Instituto Fahy como institución educativa de referencia, incorporando orientación agropecuaria según las necesidades de la región.</p>
+                        <p>Consolidación del Instituto Fahy como institución educativa de referencia, incorporando
+                            orientación agropecuaria según las necesidades de la región.</p>
                     </div>
                 </div>
                 <div class="timeline-item right" data-aos="fade-left">
                     <div class="timeline-content">
                         <h3>1980-Presente</h3>
-                        <p>La Asociación continúa siendo la entidad propietaria del Instituto Fahy, manteniendo vivo el legado de sus fundadoras y adaptándose a los nuevos desafíos educativos.</p>
+                        <p>La Asociación continúa siendo la entidad propietaria del Instituto Fahy, manteniendo vivo el
+                            legado de sus fundadoras y adaptándose a los nuevos desafíos educativos.</p>
                     </div>
                 </div>
             </div>
@@ -484,23 +519,30 @@
                     <div class="card h-100 shadow">
                         <div class="card-body">
                             <h3 class="card-title">🏫 Instituto Fahy</h3>
-                            <p class="card-text">Fundado en 1927 en Moreno, Provincia de Buenos Aires, el Instituto Fahy es la máxima expresión del legado educativo de la Asociación.</p>
-                            <p>La institución mantiene su orientación agropecuaria y continúa formando generaciones de estudiantes con los valores de esfuerzo, honestidad y compromiso social que inspiraron a sus fundadoras.</p>
+                            <p class="card-text">Fundado en 1927 en Moreno, Provincia de Buenos Aires, el Instituto Fahy
+                                es la máxima expresión del legado educativo de la Asociación.</p>
+                            <p>La institución mantiene su orientación agropecuaria y continúa formando generaciones de
+                                estudiantes con los valores de esfuerzo, honestidad y compromiso social que inspiraron a
+                                sus fundadoras.</p>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="col-md-6 mb-4" data-aos="fade-left">
                     <div class="card h-100 shadow">
                         <div class="card-body">
                             <h3 class="card-title">🤝 Continuidad de la misión</h3>
-                            <p class="card-text">La Asociación de Señoras de San José sigue siendo hoy la entidad propietaria y fundadora del Instituto Fahy, manteniendo vivo el espíritu de sus pioneras.</p>
-                            <p>Las sucesivas generaciones de mujeres que han dirigido la Asociación han preservado los valores originales mientras adaptaban la institución a los desafíos educativos contemporáneos.</p>
+                            <p class="card-text">La Asociación de Señoras de San José sigue siendo hoy la entidad
+                                propietaria y fundadora del Instituto Fahy, manteniendo vivo el espíritu de sus
+                                pioneras.</p>
+                            <p>Las sucesivas generaciones de mujeres que han dirigido la Asociación han preservado los
+                                valores originales mientras adaptaban la institución a los desafíos educativos
+                                contemporáneos.</p>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
             <div class="text-center mt-5" data-aos="fade-up">
                 <h3>Valores que perduran</h3>
                 <div class="row mt-4">
@@ -533,7 +575,7 @@
         </div>
     </section>
 
-   <!-- FOOTER -->
+    <!-- FOOTER -->
     <footer class="bg-dark">
         <div class="footer-top">
             <div class="container">
