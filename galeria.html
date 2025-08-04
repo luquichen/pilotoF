@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Fotos | Institución Educativa</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Fancybox -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
+    <style>
+        :root {
+            --primary-color: #ff4500;
+            --secondary-color: #f8f9fa;
+            --text-color: #333;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            color: var(--text-color);
+            padding-top: 0px;
+        }
+        
+        .gallery-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            padding: 80px 0;
+            color: white;
+            text-align: center;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .gallery-title {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .gallery-subtitle {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+        
+        .gallery-container {
+            padding: 0 15px;
+            margin-bottom: 40px;
+        }
+        
+        .portfolio-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 25px;
+            height: 250px;
+            transition: all 0.3s ease;
+            background-color: white;
+        }
+        
+        .portfolio-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+        }
+        
+        .image-zoom-wrapper {
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+            cursor: pointer;
+        }
+        
+        .portfolio-item:hover img {
+            transform: scale(1.08);
+        }
+        
+        .iconbox {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            text-decoration: none;
+            opacity: 0;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .portfolio-item:hover .iconbox {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+        }
+        
+        .image-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+            color: white;
+            padding: 15px;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .portfolio-item:hover .image-info {
+            transform: translateY(0);
+        }
+        
+        .image-title {
+            font-weight: 600;
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+        }
+        
+        /* Estilos para Fancybox */
+        .fancybox__container {
+            --fancybox-bg: rgba(0, 0, 0, 0.9);
+        }
+        
+        .fancybox__toolbar {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+        }
+        
+        .fancybox__nav {
+            --fancybox-navigation-color: #fff;
+        }
+        
+        .fancybox__thumbs {
+            --fancybox-thumbs-gap: 8px;
+            background: rgba(0, 0, 0, 0.3);
+        }
+        
+        .fancybox__image {
+            transition: transform 0.3s ease;
+        }
+        
+        /* Footer y responsive igual que antes */
+        .footer {
+            background-color: #343a40;
+            color: white;
+            padding: 40px 0 20px;
+            margin-top: 30px;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+        
+        @media (max-width: 768px) {
+            .gallery-title {
+                font-size: 2.2rem;
+            }
+            
+            .portfolio-item {
+                height: 200px;
+            }
+            
+            .gallery-header {
+                padding: 60px 0;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .gallery-title {
+                font-size: 1.8rem;
+            }
+            
+            .gallery-subtitle {
+                font-size: 1rem;
+            }
+            
+            .portfolio-item {
+                height: 180px;
+            }
+        }
+    </style>
+      <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body>
+ <nav class="navbar navbar-expand-lg bg-white sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="./index.html">
+                <img src="./assets/images/logoverdeing.png" alt="" style="width: 150px; height: 70%;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">Sobre Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./historia.html">Historia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./instalacion.html">Galería</a>
+                    </li>
+                </ul>
+                <a href="./contact.html" class="btn btn-brand ms-lg-3">Contáctanos</a>
+            </div>
+        </div>
+    </nav>
+ 
+    <br>
+    <div class="container">
+        
+        <!-- Header de la galería -->
+         <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <div class="section-title">
+                        <h1>Galeria de imágenes</h1>
+                        <div class="line"></div>
+                        <p>Conocé la infraestructura, el campo, los animales y los productos que forman parte de nuestra
+                            escuela..</p>
+                    </div>
+                </div>
+            </div>
+
+        <div class="gallery-container">
+            <div class="gallery-stats">
+                <!-- Estadísticas opcionales -->
+            </div>
+            
+            <div class="row" id="gallery-row">
+                <!-- Las imágenes se generarán automáticamente con JavaScript -->
+            </div>
+        </div>
+    </div>
+ </div>
+     <footer class="bg-dark">
+            <div class="footer-top">
+                <div class="container">
+                    <div class="row gy-5">
+                        <!-- Columna Izquierda - Lema -->
+                        <div class="col-md-4">
+                            <a href="#"><img src="./assets/images/logo111 blanco.png"
+                                    style="max-width: 150px; color: white;" alt="Logo"></a>
+                            <div class="line"></div>
+                            <p class="text-white">Escuela con orientación agropecuaria - Fundada en 1927</p>
+                            <p class="text-white">Asociación de Señoras de San José- Entidad propietaria y fundadora.
+                            </p>
+
+                        </div>
+
+                        <!-- Columna Central - Contacto -->
+                        <div class="col-md-4">
+                            <h5 class="mb-0 text-white">CONTACTO</h5>
+                            <div class="line"></div>
+                            <ul class="mt-3">
+                                <li><i class="ri-map-pin-line me-2"></i>Av. Francisco Piovano 4400</li>
+                                <li><i class="ri-phone-line me-2"></i>011 2474-0971</li>
+                                <li><i class="ri-mail-line me-2"></i>recepcioninstitutofahy@gmail.com</li>
+                            </ul>
+                        </div>
+
+                        <!-- Columna Derecha - Mapa -->
+                        <div class="col-md-4">
+                            <h5 class="mb-0 text-white">UBICACIÓN</h5>
+                            <div class="line"></div>
+                            <div class="mt-3">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.360884294689!2d-58.8123664!3d-34.645587899999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc946bf70459ad%3A0xb20d022af0f129e1!2sInstituto%20Fahy!5e0!3m2!1sen!2sar!4v1748362211586!5m2!1sen!2sar"
+                                    width="250" height="150" style="border:0;" allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+  
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Fancybox -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    
+    <script>
+        // Lista de imágenes (ejemplo con 10 imágenes, reemplaza con las tuyas)
+         const imageFiles = [
+            "image00001.jpeg", "image00002.jpeg", "image00003.jpeg", "image00004.jpeg", 
+            "image00005.jpeg", "image00006.jpeg", "image00007.jpeg", "image00008.jpeg", 
+            "image00009.jpeg", "image00010.jpeg", "image00011.jpeg", "image00012.jpeg", 
+            "image00013.jpeg", "image00014.jpeg", "image00015.jpeg", "image00016.jpeg", 
+            "image00017.jpeg", "image00018.jpeg", "image00019.jpeg", "image00020.jpeg", 
+            "image00021.jpeg", "image00022.jpeg", "image00023.jpeg", "image00024.jpeg", 
+            "image00025.jpeg", "image00026.jpeg", "image00027.jpeg", "image00028.jpeg", 
+            "image00031.jpeg", "image00032.jpeg", 
+            "image00033.jpeg", "image00034.jpeg", "image00035.jpeg", "image00036.jpeg", 
+            "image00037.jpeg", "image00038.jpeg", "image00039.jpeg", "image00040.jpeg", 
+            "image00041.jpeg", "image00042.jpeg", "image00043.jpeg", "image00044.jpeg", 
+            "image00045.jpeg", "image00046.jpeg", "image00047.jpeg", "image00048.jpeg", 
+            "image00049.jpeg", "image00050.jpeg", "image00051.jpeg", "image00052.jpeg", 
+            "image00053.jpeg", "image00054.jpeg", "image00055.jpeg", "image00056.jpeg", 
+            "image00057.jpeg", "image00058.jpeg", "image00059.jpeg", "image00060.jpeg", 
+            "image00061.jpeg", "image00062.jpeg", "image00063.jpeg", "image00064.jpeg", 
+            "image00065.jpeg", "image00066.jpeg", "image00068.jpeg", 
+            "image00069.jpeg", "image00070.jpeg", "image00071.jpeg", "image00072.jpeg", 
+            "image00073.jpeg", "image00074.jpeg", 
+            "image00077.jpeg", "image00079.jpeg", "image00080.jpeg", 
+            "image00081.jpeg", "image00082.jpeg", "image00084.jpeg", 
+            "image00085.jpeg", "image00086.jpeg", "image00087.jpeg", "image00088.jpeg", 
+            "image00089.jpeg", "image00090.jpeg", "image00091.jpeg", "image00092.jpeg", 
+            "image00093.jpeg", "image00094.jpeg", "image00095.jpeg", "image00096.jpeg", 
+            "image00097.jpeg", "image00098.jpeg", "image00099.jpeg", "image00100.jpeg", 
+            "image00101.jpeg", "image00102.jpeg", "image00103.jpeg", "image00104.jpeg", 
+            "image00105.jpeg", "image00106.jpeg", "image00107.jpeg", "image00108.jpeg", 
+            "image00109.jpeg", "image00110.jpeg", "image00111.jpeg", "image00112.jpeg", 
+            "image00113.jpeg", "image00114.jpeg", "image00115.jpeg", "image00116.jpeg", 
+            "image00117.jpeg", "image00118.jpeg", "image00119.jpeg", "image00120.jpeg", 
+            "image00121.jpeg", "image00122.jpeg", "image00123.jpeg", "image00124.jpeg", 
+            "image00125.jpeg", "image00126.jpeg", "image00127.jpeg", "image00128.jpeg", 
+            "image00129.jpeg", "image00130.jpeg", "image00131.jpeg", "image00132.jpeg", 
+            "image00133.jpeg", "image00134.jpeg", "image00135.jpeg", "image00136.jpeg", 
+            "image00137.jpeg", "image00138.jpeg", "image00139.jpeg"
+        ];
+
+        // Función para generar la galería
+        function generateGallery() {
+            const galleryRow = document.getElementById('gallery-row');
+            const basePath = './assets/images/wetransfer_image00001-jpeg_2025-08-04_1421/';
+            
+            imageFiles.forEach((image, index) => {
+                const col = document.createElement('div');
+                col.className = 'col-12 col-sm-6 col-md-4 col-lg-3 mb-4';
+                
+                const portfolioItem = document.createElement('div');
+                portfolioItem.className = 'portfolio-item';
+                
+                const imageLink = document.createElement('a');
+                imageLink.href = basePath + image;
+                imageLink.setAttribute('data-fancybox', 'gallery');
+                imageLink.setAttribute('data-caption', `Instituto Fahy`);
+                
+                const imageWrapper = document.createElement('div');
+                imageWrapper.className = 'image-zoom-wrapper';
+                
+                const img = document.createElement('img');
+                img.src = basePath + image;
+                img.alt = `Imagen ${index + 1} de la galería`;
+                img.loading = "lazy";
+                
+                const iconBox = document.createElement('div');
+                iconBox.className = 'iconbox';
+                iconBox.innerHTML = '<i class="fas fa-search-plus"></i>';
+                iconBox.onclick = (e) => {
+                    e.preventDefault();
+                    Fancybox.show([{ src: basePath + image }]);
+                };
+                
+                const imageInfo = document.createElement('div');
+                imageInfo.className = 'image-info';
+                imageInfo.innerHTML = ``;
+                
+                imageWrapper.appendChild(img);
+                imageLink.appendChild(imageWrapper);
+                portfolioItem.appendChild(imageLink);
+                portfolioItem.appendChild(iconBox);
+                portfolioItem.appendChild(imageInfo);
+                col.appendChild(portfolioItem);
+                galleryRow.appendChild(col);
+            });
+        }
+
+        // Inicializar la galería cuando el documento esté listo
+        document.addEventListener('DOMContentLoaded', () => {
+            generateGallery();
+            
+            // Configuración avanzada de Fancybox
+            Fancybox.bind("[data-fancybox]", {
+                Thumbs: {
+                    type: "classic",
+                    autoStart: true,
+                },
+                Toolbar: {
+                    display: {
+                        left: ["infobar"],
+                        middle: ["zoomIn", "zoomOut", "toggle1to1", "rotateCCW", "rotateCW", "flipX", "flipY"],
+                        right: ["slideshow", "thumbs", "close"],
+                    },
+                },
+                Image: {
+                    zoom: true,
+                    click: 'toggleZoom',
+                    wheel: 'zoom',
+                },
+                on: {
+                    "Carousel.change": (fancybox, carousel, slide) => {
+                        // Efecto suave al cambiar de imagen
+                        const img = slide.$el.querySelector(".fancybox__image");
+                        if (img) {
+                            img.style.transform = "scale(0.95)";
+                            setTimeout(() => {
+                                img.style.transform = "scale(1)";
+                            }, 50);
+                        }
+                    },
+                },
+            });
+        });
+    </script>
+</body>
+</html>
+
